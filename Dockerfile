@@ -1,7 +1,7 @@
-FROM node:20-alpine
-WORKDIR /app
-COPY package.json ./
-RUN npm install --production
-COPY . .
-EXPOSE 3000
-CMD ["npm", "start"]
+
+FROM nginx:alpine
+
+COPY ilya_kad_n_giyim.html /usr/share/nginx/html/index.html
+
+EXPOSE 80
+
